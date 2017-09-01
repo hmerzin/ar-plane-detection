@@ -9,10 +9,12 @@
 import UIKit
 import SceneKit
 import ARKit
+import WebKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +23,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        //sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
+        let scene: SCNScene! = SCNScene(named: "art.scnassets/empty.scn")
         // Set the scene to the view
         sceneView.scene = scene
     }
@@ -34,10 +35,23 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillAppear(animated)
         
         // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-
+        let configuration = ARWorldTrackingSessionConfiguration()
+        configuration.planeDetection = .horizontal
         // Run the view's session
         sceneView.session.run(configuration)
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tap))
+        self.sceneView.addGestureRecognizer(gestureRecognizer)
+    }
+    var nodes = [SCNNode!]()
+    @objc
+    func tap(sender: UITapGestureRecognizer) {
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        let radius = 0.05
+        let sphere = SCNSphere(radius: CGFloat(radius))
+        node.addChildNode(SCNNode(geometry: sphere))
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {

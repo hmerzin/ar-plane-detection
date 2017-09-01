@@ -15,6 +15,7 @@
 		F752B24E1F58E72100A80C0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F752B24C1F58E72100A80C0D /* LaunchScreen.storyboard */; };
 		F752B2591F58E72100A80C0D /* testarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F752B2581F58E72100A80C0D /* testarTests.swift */; };
 		F752B2641F58E72100A80C0D /* testarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F752B2631F58E72100A80C0D /* testarUITests.swift */; };
+		F7BB7B051F59AEE5008FF340 /* empty.scn in Resources */ = {isa = PBXBuildFile; fileRef = F7BB7B041F59AEE5008FF340 /* empty.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F752B25F1F58E72100A80C0D /* testarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F752B2631F58E72100A80C0D /* testarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testarUITests.swift; sourceTree = "<group>"; };
 		F752B2651F58E72100A80C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7BB7B041F59AEE5008FF340 /* empty.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = empty.scn; path = testar/art.scnassets/empty.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		F752B2351F58E72000A80C0D = {
 			isa = PBXGroup;
 			children = (
+				F7BB7B041F59AEE5008FF340 /* empty.scn */,
 				F752B2401F58E72100A80C0D /* testar */,
 				F752B2571F58E72100A80C0D /* testarTests */,
 				F752B2621F58E72100A80C0D /* testarUITests */,
@@ -238,6 +241,7 @@
 				F752B2441F58E72100A80C0D /* art.scnassets in Resources */,
 				F752B24E1F58E72100A80C0D /* LaunchScreen.storyboard in Resources */,
 				F752B24B1F58E72100A80C0D /* Assets.xcassets in Resources */,
+				F7BB7B051F59AEE5008FF340 /* empty.scn in Resources */,
 				F752B2491F58E72100A80C0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8UR7G64J2J;
 				INFOPLIST_FILE = testar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = harry.testar;
@@ -445,6 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8UR7G64J2J;
 				INFOPLIST_FILE = testar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = harry.testar;
